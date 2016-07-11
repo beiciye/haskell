@@ -30,3 +30,9 @@ addVectors a b = (fst a + fst b,snd a + snd b)
 head' :: [a] ->a
 head' (x:_) = x
 
+
+compare' :: (Ord a) => a -> a -> Ordering
+a `compare'` b
+    | a > b = GT
+    | a < b = LT
+    | otherwise = EQ
