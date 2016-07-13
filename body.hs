@@ -36,3 +36,17 @@ a `compare'` b
     | a > b = GT
     | a < b = LT
     | otherwise = EQ
+
+
+bmiTell :: (RealFloat a) => a -> a -> String
+bmiTell weight height
+    | bmi <= skinny = "underWeight"
+    | bmi <= normal = "normal"
+    | bmi <= fat = "overWeight"
+    | otherwise  = "whale"
+      where bmi = weight/height^2
+            skinny = 18.5
+            normal = 25.0
+            fat = 30.0
+
+
